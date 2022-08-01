@@ -1,3 +1,5 @@
+final URLs url = URLs();
+
 class URLs {
   final String _api = 'https://api.themoviedb.org/3';
   final String _key = '?api_key=ba978cbc550dbd8fa5fca64c0fbbf1aa';
@@ -21,5 +23,9 @@ class URLs {
 
   String searchMovie(String query) {
     return '$_api/search/movie$_key$_lang&query=$query$_adult';
+  }
+
+  String moviePoster(String path) {
+    return 'http://image.tmdb.org/t/p/original/$path';
   }
 }

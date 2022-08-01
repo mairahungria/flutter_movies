@@ -8,8 +8,6 @@ import '../../features/movie_details/models/credits_model.dart';
 import '../../features/movie_details/models/movie_details_model.dart';
 
 class ClientHttp {
-  final URLs url = URLs();
-
   Future<MovieDetailsModel> getMovieDetails(int id) async {
     final response = await http.get(
       Uri.parse(url.movieDetails(id)),
